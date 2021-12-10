@@ -1,4 +1,4 @@
-# Slideshow Control Using BioSigal
+# Slideshow Control Using BioSigal (MS Power Point)
 ![Alt text](images/1.jpg?raw=true "Title")
 
 # Build model
