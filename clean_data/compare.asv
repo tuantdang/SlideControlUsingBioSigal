@@ -1,0 +1,31 @@
+
+    clc
+    clear all
+    close all
+   
+    EOG_RAW_Data = csvread("EOG.csv");
+    EMG_RAW_Data = csvread("EMG.csv");
+EOG_Data = EOG_RAW_Data(:,3);
+EMG_Data = EMG_RAW_Data(:,3);
+T = 1:length(EOG_Data);
+
+startSample = 1+(850.25)*250;
+endSample = (86-0.25)*250;
+
+
+
+yrange = [-100 100];
+figure;
+plot(T(startSample:endSample)/250,EOG_Data(startSample:endSample))
+ylim(yrange)
+% figure;
+% plot(T(startSample:endSample)/250,EOG_right_Raw(startSample:endSample))
+% ylim(yrange)
+
+% figure;
+% plot(T(startSample:endSample)/250,EMG_left_Raw(startSample:endSample))
+% ylim(yrange)
+figure;
+plot(T(startSample:endSample)/250,EMG_Data(startSample:endSample))
+ylim(yrange)
+
